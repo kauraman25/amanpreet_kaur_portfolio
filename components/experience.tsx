@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 const experiences = [
   {
-    role: "Software Developer",
+    role: "Software Developer Intern",
     company: "Apertotek",
     period: "July 2025 - Present",
     description:
