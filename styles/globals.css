@@ -123,3 +123,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}

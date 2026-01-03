@@ -1,35 +1,31 @@
 "use client"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 
 const experiences = [
   {
     role: "Software Developer Intern",
-    company: "Apertotek",
+    company: {name: "Apertotek", url: "https://www.apertotek.com/"},
     period: "July 2025 - Present",
     description:
-      "Working on developing and maintaining web applications using React, Node.js, and MongoDB. Collaborating with cross-functional teams to deliver high-quality software solutions.",
+      "Working on a Document Reminder Web Application using Next.js (App Router) and shadcn/ui, with implemented user authentication and authorization to secure application access. Currently working on an OCR model using Tesseract to automatically extract document details and minimize manual data entry. Implemented a crypto module using the Advanced Encryption Standard (AES) algorithm for encryption, decryption,and masking to securely store sensitive document numbers on both the frontend and backend. Configured Nodemailer to send email notifications prior to document expiration and integrated Vercel Cron Jobs to schedule and trigger automated document expiry reminders. Schedule and trigger automated document expiry reminders.",
   },
   {
     role: "Software Developer Intern",
-    company: "DreamSoft4u pvt ltd",
+    company:{ name: "DreamSoft4u pvt ltd", url: "https://www.dreamsoft4u.com/"},
     period: "May 2024 - October 2024",
     description:
-      "Contributed to frontend and backend development of client projects. Gained experience in Agile methodologies and improved coding skills through code reviews and pair programming.",
+     "Developed a fully responsive web application using React.js, Node.js, and Material-UI for 1,000+ patients, improving cross-device usability and user experience. Designed a patient appointment booking system for VCDoctor and integrated secure RESTful APIs with CRUD functionality, boosting scheduling efficiency by 10% and enabling real-time data management."
   },
-  // {
-  //   role: "Junior Developer",
-  //   company: "StartUp Hub",
-  //   period: "2019 - 2020",
-  //   description: "Built RESTful APIs and frontend components. Contributed to product development from scratch.",
-  // },
+
 ]
 
 export function Experience() {
   return (
     <section id="experience" className="py-20 px-4 bg-card/30">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">Experience</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center">Experience</h2>
 
         <div className="space-y-6">
           {experiences.map((exp, i) => (
@@ -38,7 +34,9 @@ export function Experience() {
                 <div className="flex items-start justify-between">
                   <div>
                     <CardTitle>{exp.role}</CardTitle>
-                    <CardDescription className="text-base mt-1">{exp.company}</CardDescription>
+                    <Link href={exp.company.url} target="_blank">
+                      <CardDescription className="text-base mt-1 cursor-pointer hover:text-violet-500">{exp.company.name}</CardDescription>
+                    </Link>
                   </div>
                   <span className="text-sm text-primary font-semibold">{exp.period}</span>
                 </div>

@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 import { CustomCursor } from "@/components/custom-cursor"
+import { DesktopOnly } from "@/components/desktop-only"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -41,7 +42,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <CustomCursor />
+          <DesktopOnly>
+            <CustomCursor />
+          </DesktopOnly>
           {children}
           <Analytics />
         </ThemeProvider>

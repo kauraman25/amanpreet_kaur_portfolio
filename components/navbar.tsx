@@ -22,7 +22,7 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          My Portfolio
+          Amanpreet.
         </div>
 
         {/* Navigation Links */}
@@ -55,7 +55,7 @@ export function Navbar() {
 
         {/* Right side actions */}
         <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm" onClick={() => window.open("https://drive.google.com/file/d/10r9oaaIOEvzdy6MZYwUwmR7FkpWONXOB/view?usp=drive_link")}>
+          <Button variant="outline" size="sm" onClick={() => window.open("https://drive.google.com/file/d/1qqfwY2UW25zo6o6xI6lK1eL1dxtN3NpZ/view?usp=drive_link")}>
             Resume
           </Button>
           {mounted && (

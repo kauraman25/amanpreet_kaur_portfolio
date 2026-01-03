@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Portfolio</h3>
+            <h3 className="font-bold text-lg mb-4">Amanpreet.</h3>
             <p className="text-foreground/60 text-sm">Building beautiful and functional web experiences</p>
           </div>
           <div>
